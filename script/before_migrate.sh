@@ -9,7 +9,7 @@ then
 else
     # if we don't find composer in path so we need to download the phar now
     curl -s https://getcomposer.org/installer | php
-    COMPOSER_BIN='composer.phar'
+    COMPOSER_BIN='./composer.phar'
 fi
 
 # if we have a fresh install
