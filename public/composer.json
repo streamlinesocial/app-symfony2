@@ -7,10 +7,6 @@
     "require": {
         "php": ">=5.3.3",
         "symfony/symfony": "2.1.*",
-        "doctrine/orm": ">=2.2.3,<2.4-dev",
-        "doctrine/doctrine-bundle": "1.0.*",
-        "twig/extensions": "1.0.*@dev",
-        "symfony/assetic-bundle": "2.1.*"
     },
     "scripts": {
         "post-install-cmd": [
