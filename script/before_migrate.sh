@@ -1,14 +1,25 @@
 #!/bin/bash
 
+# find composer
+COMPOSER_BIN=${COMPOSER_BIN:-'/usr/local/bin/composer'}
+if command -v composer | grep -q composer$
+then
+    # composer in path
+else
+    # if we don't find composer in path so we need to download the phar now
+    curl -s https://getcomposer.org/installer | php
+    COMPOSER_BIN='composer.phar'
+fi
+
 # if we have a fresh install
 if [ ! -d public ]
 then
     SYMFONY_VERSION='2.1.3'
-    composer create-project symfony/framework-standard-edition public $SYMFONY_VERSION
+    $COMPOSER_BIN create-project symfony/framework-standard-edition public $SYMFONY_VERSION
 fi
 
 # install vendor files
-composer install --working-dir=public
+$COMPOSER_BIN install --working-dir=public
 
 # create_dirs_before_symlink
 mkdir -p public/app/cache
