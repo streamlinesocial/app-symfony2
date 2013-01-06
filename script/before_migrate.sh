@@ -5,6 +5,7 @@ COMPOSER_BIN=${COMPOSER_BIN:-'/usr/local/bin/composer'}
 if command -v composer | grep -q composer$
 then
     # composer in path
+    echo "Found" > /dev/null
 else
     # if we don't find composer in path so we need to download the phar now
     curl -s https://getcomposer.org/installer | php
