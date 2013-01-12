@@ -4,6 +4,8 @@ public/app/cache/*
 public/app/logs/*
 public/build/
 public/vendor
+
+# in case devs or automated builds need this locally
 public/composer.phar
 composer.phar
 
