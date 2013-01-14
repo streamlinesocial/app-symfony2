@@ -16,7 +16,7 @@ fi
 # if we have a fresh install
 if [ ! -d public ]
 then
-    SYMFONY_VERSION='2.1.3'
+    SYMFONY_VERSION='2.1.6'
     $COMPOSER_BIN create-project symfony/framework-standard-edition public $SYMFONY_VERSION
 fi
 
