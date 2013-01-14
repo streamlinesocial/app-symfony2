@@ -19,6 +19,9 @@
         <mkdir dir="${basedir}/build/coverage"/>
         <mkdir dir="${basedir}/build/logs"/>
         <mkdir dir="${basedir}/build/pdepend"/>
+
+        <!-- download required vendors or other non-databse related actions -->
+        <exec executable="${basedir}/script/deploy/before_migrate.sh" />
     </target>
 
     <target name="lint" description="Perform syntax check of sourcecode files">
